@@ -53,9 +53,10 @@ def player_playing_loop():
             print(f"Your answer: {player_guess}")
             break
         elif player_guess == display_rand_letters:
-            print("Correct!")
+            print("Correct! Good Job!")
             level_num+=1
             random_letters_last+=1
+            time.sleep(3)
             clear_and_create_letters()
 # This gathers everything from before, and checks the user's input to see if it is correct, then it repeats, if not correct, it moves on
 
