@@ -30,7 +30,7 @@ def delay():
 def clear_and_create_letters():
     """Creates the random letters, randomizes, and increases the length by 1 each time"""
     global random_letters, display_rand_letters
-    random_letters = [random.choice(string.ascii_uppercase)for _ in range(random_letters_last)]
+    random_letters = [random.choice(string.ascii_uppercase) for _ in range(random_letters_last)]
     display_rand_letters = "".join(random_letters)
 
 def display_letters():
@@ -80,9 +80,7 @@ def playing_again_choice():
         if player_play_again_choice == "y":
             level_num = 1; random_letters_last = 4
             random_letters.clear()
-            clear_and_create_letters()
-            player_playing_loop()
-            display_results()
+            clear_and_create_letters(); player_playing_loop(); display_results()
         elif player_play_again_choice == "n":
             break
         else:
@@ -95,7 +93,5 @@ def start_game():
     if player_start == "q":
         return
     else:
-        player_playing_loop()
-        display_results()
-        playing_again_choice()
+        player_playing_loop(); display_results(); playing_again_choice()
 start_game()
